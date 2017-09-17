@@ -4,12 +4,12 @@
   "description": "fun-wiki October CMS theme",
   "main": "index.js",
   "author": "CRYDEsigN",
+  "repository": "https://github.com/Cryden/fw_theme_octobercms.git",
   "license": "MIT",
   "dependencies": {
     "cross-env": "^5.0.5",
     "laravel-mix": "^1.4.3"
   },
-  "repository": "https://github.com/Cryden/fw_theme_octobercms.git",
   "scripts": {
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
