@@ -1,0 +1,8 @@
+{
+  "name": "fun-wiki",
+  "version": "1.0.0",
+  "description": "fun-wiki October CMS theme",
+  "main": "index.js",
+  "author": "CRYDEsigN",
+  "license": "MIT"
+}

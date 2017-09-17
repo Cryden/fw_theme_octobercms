@@ -1,0 +1,67 @@
+==
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        <?php include(public_path().'\css\style.css'); ?>
+    </style>
+  </head>
+
+  <body id="app">
+    <div class="wrapper">
+      <div class="shadow"></div>
+
+      <!-- add css styles -->
+
+      <div class="collapsing"></div>
+
+
+        <!-- header content -->
+        <header>
+          <!-- menu logo -->
+            {% partial 'site/menu_logo' %}
+          <!-- /menu logo -->
+          <div class="sidebar_menu">
+              <!-- sidebar menu -->
+              {% partial 'site/main_menu' %}
+              <!-- /sidebar menu -->
+              <i class="fa fa-close close_btn"></i>
+          </div>
+        </header>
+        <!-- /header content -->
+
+        <!-- page content -->
+        <main>
+
+          {% page %}
+
+        </main>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+            <div class="footer_copyright">
+                <div class="copyright">
+                    <p><strong>F.UN</strong>&nbsp;&nbsp;by&nbsp;&nbsp;<strong>CRYDE</strong>sig<strong>N</strong>. 2015-2017</p>
+                </div>
+            </div>
+            <div class="footer_menu">
+                <i class="footer_button fa icon-edit active"></i>
+                <i class="footer_button fa icon-star"></i>
+                <i class="footer_button fa icon-search"></i>
+            </div>
+        </footer>
+        <!-- /footer content -->
+    </div>
+
+    <!-- Custom Theme Scripts -->
+    <script src="{{ asset('js/admin.js') }}"></script>
+
+  </body>
+</html>
