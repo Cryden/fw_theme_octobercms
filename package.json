@@ -4,5 +4,8 @@
   "description": "fun-wiki October CMS theme",
   "main": "index.js",
   "author": "CRYDEsigN",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "laravel-mix": "^1.4.3"
+  }
 }
