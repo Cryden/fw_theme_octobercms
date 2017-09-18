@@ -1,0 +1,174 @@
+header
+  position: fixed
+  top: 0
+  left: -320px
+  z-index: 1050
+  width: 260px
+  height: 100vh
+  background: $color-base
+  box-shadow: 6px 0px 20px -2px rgba(0,0,0,0.75)    
+  display: block
+  overflow: auto
+  -webkit-overflow-scrolling: touch
+  -ms-overflow-style: none
+  +laptop
+    left: 60px!important
+  +desktop
+    left: 100px!important
+
+header::-webkit-scrollbar
+  display: none
+
+//// sidebar-menu
+
+.sidebar_menu
+  +laptop
+    margin-top: 160px
+
+// menu logo - FIXED
+
+.menu_logo
+  position: fixed
+  width: 260px
+  height: 120px
+  display: none
+  background-color: $color-base
+  +laptop
+    display: flex
+  .logo
+    display: block
+    margin: 40px auto
+  h1
+    position: absolute
+    top: 90px
+    color: $color-main
+    font-size: 10px
+    display: block
+    width: 100%
+    text-align: center
+
+// /menu logo
+
+// menu profile quick info
+
+.profile
+  display: flex
+  flex-direction: row
+  +laptop
+    display: none
+
+  .profile_img
+    height: 50px
+    width: 50px
+    margin: 15px
+    padding: 2px
+    border: 1px solid rgba(52, 73, 94, 0.44)
+    background: #fff
+
+  .profile_info
+    display: flex
+    flex-direction: column
+    margin: 15px
+
+    span 
+      font-size: 13px
+      line-height: 30px
+      color: #BAB8B8
+
+    h2 
+      font-size: 14px
+      color: #ECF0F1
+      margin: 0
+      font-weight: 300
+
+// /menu profile quick info
+
+// menu section
+
+#main_menu
+  display: flex
+  flex-direction: column
+  padding-bottom: 50px
+
+  .item    
+    height: 50px
+    width: 100%
+    line-height: 50px
+    margin: 0
+    padding: 0
+    display: flex
+    align-content: space-around
+    color: #93a4ab
+
+    a
+      color: inherit
+      font-size: 14px
+      line-height: 50px
+      text-decoration: none
+      width: 100%
+
+  .item_dropdown
+    background: $color-base
+  .item_dropdown>a.collapsed>.menu_icon_dropdown
+    transform-origin: center
+    transform: rotate(180deg)
+
+  .item_group
+    .item_list
+      background: rgba(0, 0, 0, 0.25)
+      .item
+        padding-left: 15px
+      .item_group
+        .item_li
+          padding-left: 15px
+
+  .menu_icon
+    font-size: 20px
+    margin: 15px
+    width: 20px
+
+  .menu_icon_dropdown
+    font-size: 12px
+    margin: 19px 15px 
+    float: right
+    color: $color-second
+
+  .item
+    &:hover
+      background-color: rgba(0, 0, 0, 0.15)
+      a 
+        color: $color-main
+
+  li, ul
+    list-style-type: none
+    -webkit-padding-start: 0
+    margin: 0
+
+  .active
+    background: url("../images/left-menu-hover.png") repeat-y
+
+// /menu_section
+
+//// sidebar-menu
+
+// open+close menu button
+
+.open_btn
+  padding: 20px
+  font-size: 20px
+  line-height: 20px
+  height: 60px 
+  display: block
+
+.close_btn
+  color: $color-second
+  position: fixed
+  top: 0
+  left: 260px
+  padding: 20px
+  font-size: 20px
+  line-height: 20px
+  height: 60px
+  display: none
+
+// /open+close menu button
