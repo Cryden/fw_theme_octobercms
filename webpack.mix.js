@@ -1,3 +1,10 @@
 const { mix } = require('laravel-mix');
 
-mix.sass( 'source/sass/style.scss', 'assets/css' );
+mix
+    .setPublicPath('assets')
+    .setResourceRoot('../')
+    .sass( 'source/sass/style.scss', 'assets/css' )
+    .js( 'source/js/main.js', 'assets/js' )
+    .options({
+        processCssUrls: true
+      });
