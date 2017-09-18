@@ -7,6 +7,7 @@
   "repository": "https://github.com/Cryden/fw_theme_octobercms.git",
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "4.0.0-beta",
     "cross-env": "^5.0.5",
     "font-awesome": "^4.7.0",
     "jquery": "^3.2.1",

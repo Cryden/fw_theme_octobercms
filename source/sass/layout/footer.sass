@@ -1,21 +1,36 @@
 footer
-  z-index: 10
   position: fixed
+  display: flex
   bottom: 0
   width: 100%
   height: 50px
-  background: #2d3136
+  background: $color-background
   display:flex
-  flex-direction: column
+  flex-direction: row-reverse
   justify-content: space-between
+
   .footer_copyright
     display: none
+    +tablet
+      display: block
+      width: 50%
+      height: 50px
+      color: $color-main
+      text-align: right
+      margin-right: 20px
+      line-height: 50px
+
   .footer_menu
+    width: 100%
     margin-left: 15px
     margin-right: 15px
     display: flex
     flex-direction: row
     justify-content: space-between
+    +tablet
+      width: 40%
+
+
     .footer_button
       width: 40px
       height: 50px
@@ -23,60 +38,54 @@ footer
       text-align: center
       color: white
       font-size: 20px
+
     .active
       border-bottom: 3px solid #ff715b
 
-@media (min-width: 426px)
-
-  footer
-    width: 40px
+  +laptop
+    width: 50px
     height: 100vh
     right: 0
     display: flex
-    
+    background: none
+    flex-direction: column
+
     .footer_copyright
-      margin-top: 40px
+      margin-top: 160px
       display: block
-      
+      width: 100%
+      line-height: 0
+
       .copyright
         transform: rotate(270deg)
-        transform-origin: left top 0
+        transform-origin: right bottom
         
         p
           color: #c2cacc
           display: inline-block
           text-align: right
+          min-width: 200px
+          line-height: 1.5
           
     .footer_menu
       margin-bottom: 40px
       display: flex
       flex-direction: column
       justify-content: space-between
+
       .footer_button
-        width: 27px
-        height: 20px
+        width: 35px
+        height: 30px
         margin-top: 5px
         margin-bottom: 5px
-        line-height: 20px
+        line-height: 30px
         text-align: left
         cursor: pointer
         &:hover
-          border-right: 3px solid #ba2d0b
+          border-right: 3px solid $color-second-dark
+
       .active
         border-bottom: 0
-        border-right: 3px solid #ff715b
-
-@media (min-width: 1025px)
-  footer
-
-@media (max-height: 225px)
-  footer
-    .theme_selector
-      display: none
-
-@media (max-height: 420px)
-  footer
-    .footer_copyright
-      display: none
-    .footer_menu
-      justify-content: flex-end
+        border-right: 3px solid $color-second
+        &:hover
+          border-right: 3px solid $color-second

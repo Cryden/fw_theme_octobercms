@@ -1,123 +1,174 @@
-/* <header> styles */
-
 header
+  position: fixed
+  top: 0
+  left: -320px
+  z-index: 1050
+  width: 260px
+  height: 100vh
+  background: $color-base
+  box-shadow: 6px 0px 20px -2px rgba(0,0,0,0.75)    
+  display: block
+  overflow: auto
+  -webkit-overflow-scrolling: touch
+  -ms-overflow-style: none
+  +laptop
+    left: 60px!important
+  +desktop
+    left: 100px!important
 
-	.mobile_nav
-		width: 100%
-		height: 60px
-		background: $color-base
-		position: fixed
-		top: 0
-		box-shadow: 0 0px 15px black
-		display: flex
-		justify-content: space-between
-		z-index: 5
+header::-webkit-scrollbar
+  display: none
 
-		.header_logo
-			margin: 15px
-			width: 60px
-			height: 30px
-			background: url("../../fonts/logo.svg") no-repeat
-			background-size: cover
+//// sidebar-menu
 
-		.menu_button
-			display: flex
+.sidebar_menu
+  +laptop
+    margin-top: 160px
 
-			#menu_open_button
-				padding: 20px 15px
-				font-size: 20px
+// menu logo - FIXED
 
-	.main_nav
-		z-index: 17
-		overflow: auto
-		-webkit-overflow-scrolling: touch
-		-ms-overflow-style: none
-		background: $color-base
-		position: fixed
-		top: 0
-		left: -390px
-		width: 320px
-		height: 100vh
-		margin: auto
+.menu_logo
+  position: fixed
+  width: 260px
+  height: 120px
+  display: none
+  background-color: $color-base
+  +laptop
+    display: flex
+  .logo
+    display: block
+    margin: 40px auto
+  h1
+    position: absolute
+    top: 90px
+    color: $color-main
+    font-size: 10px
+    display: block
+    width: 100%
+    text-align: center
 
-		.header_logo
+// /menu logo
 
-			.header_logo_img
-				margin-left: 130px
-				margin-top: 40px
-				height: 40px
-				width: 80px
-				background: url("../../fonts/logo.svg") no-repeat
+// menu profile quick info
 
-			.header_logo_text
-				width: 100%
-				height: 40px
-				text-align: center
-				font-size: 11px
-				font-weight: 300
-				line-height: 40px	
+.profile
+  display: flex
+  flex-direction: row
+  +laptop
+    display: none
 
-		.header_menu
-			margin-top: 40px
-			flex: 1
+  .profile_img
+    height: 50px
+    width: 50px
+    margin: 15px
+    padding: 2px
+    border: 1px solid rgba(52, 73, 94, 0.44)
+    background: #fff
 
-		.menu_button
-			display: flex
+  .profile_info
+    display: flex
+    flex-direction: column
+    margin: 15px
 
-			#menu_close_button
-				position: fixed
-				top: 0
-				right: 0
-				color: $color-second
-				padding: 20px 15px
-				font-size: 20px
-				z-index: 18
-				display: none
+    span 
+      font-size: 13px
+      line-height: 30px
+      color: #BAB8B8
 
-	.main_nav::-webkit-scrollbar
-		display: none
+    h2 
+      font-size: 14px
+      color: #ECF0F1
+      margin: 0
+      font-weight: 300
 
+// /menu profile quick info
 
+// menu section
 
+#main_menu
+  display: flex
+  flex-direction: column
+  padding-bottom: 50px
 
+  .item    
+    height: 50px
+    width: 100%
+    line-height: 50px
+    margin: 0
+    padding: 0
+    display: flex
+    align-content: space-around
+    color: #93a4ab
 
-@media (min-width: 375px)
+    a
+      color: inherit
+      font-size: 14px
+      line-height: 50px
+      text-decoration: none
+      width: 100%
 
-	header
-		.main_nav_close_button
-			left: 330px
+  .item_dropdown
+    background: $color-base
+  .item_dropdown>a.collapsed>.menu_icon_dropdown
+    transform-origin: center
+    transform: rotate(180deg)
 
-@media (min-width: 426px)
+  .item_group
+    .item_list
+      background: rgba(0, 0, 0, 0.25)
+      .item
+        padding-left: 15px
+      .item_group
+        .item_li
+          padding-left: 15px
 
-	header
-		.mobile_nav
-			width: 60px
-			height: 100vh
-			background: none
-			flex-direction: column
+  .menu_icon
+    font-size: 20px
+    margin: 15px
+    width: 20px
 
-			.header_logo
-				margin: 15px
-				width: 30px
-				height: 30px
-				background: url("../../fonts/logo.svg") no-repeat
-				background-size: cover
+  .menu_icon_dropdown
+    font-size: 12px
+    margin: 19px 15px 
+    float: right
+    color: $color-second
 
-			.menu_button
-				.menu_open_button
-					padding: 20px
-		.main_nav
+  .item
+    &:hover
+      background-color: rgba(0, 0, 0, 0.15)
+      a 
+        color: $color-main
 
-@media (min-width: 1025px)
+  li, ul
+    list-style-type: none
+    -webkit-padding-start: 0
+    margin: 0
 
-	header
+  .active
+    background: url("../images/left-menu-hover.png") repeat-y
 
-		.mobile_nav
-			display: none
+// /menu_section
 
-		.main_nav
-			width: 320px
-			left: 100px!important
-			box-shadow: -6px 0 24px 5px #101010
-			.main_nav_close_button
-				display: none!important
+//// sidebar-menu
+
+// open+close menu button
+
+.open_btn
+  padding: 20px
+  font-size: 20px
+  line-height: 20px
+  height: 60px 
+  display: block
+
+.close_btn
+  color: $color-second
+  position: fixed
+  top: 0
+  left: 260px
+  padding: 20px
+  font-size: 20px
+  line-height: 20px
+  height: 60px
+  display: none
+
+// /open+close menu button

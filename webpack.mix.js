@@ -7,11 +7,8 @@ mix
     .sass( 'source/sass/style.scss', 'assets/css' )
     .js( 'source/js/main.js', 'assets/js' )
     .options({
-        processCssUrls: true
-      })
-    //.browserSync({
-    //    proxy: 'fun.octobercms.loc'
-    //  })
+      processCssUrls: true
+    })
     .webpackConfig({
       plugins: [
         new LiveReloadPlugin()
