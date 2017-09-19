@@ -25,9 +25,8 @@ header::-webkit-scrollbar
   +laptop
     margin-top: 160px
 
-// menu logo - FIXED
-
-.menu_logo
+// menu-logo - FIXED
+.menu-logo
   position: fixed
   width: 260px
   height: 120px
@@ -35,10 +34,10 @@ header::-webkit-scrollbar
   background-color: $color-base
   +laptop
     display: flex
-  .logo
+  &__logo
     display: block
     margin: 40px auto
-  h1
+  &__title
     position: absolute
     top: 90px
     color: $color-main
@@ -47,10 +46,9 @@ header::-webkit-scrollbar
     width: 100%
     text-align: center
 
-// /menu logo
+// /menu-logo
 
 // menu profile quick info
-
 .profile
   display: flex
   flex-direction: row
@@ -81,7 +79,7 @@ header::-webkit-scrollbar
       margin: 0
       font-weight: 300
 
-// /menu profile quick info
+// menu profile quick info
 
 // menu section
 
@@ -149,10 +147,7 @@ header::-webkit-scrollbar
 
 // /menu_section
 
-//// sidebar-menu
-
 // open+close menu button
-
 .open_btn
   padding: 20px
   font-size: 20px
@@ -170,5 +165,6 @@ header::-webkit-scrollbar
   line-height: 20px
   height: 60px
   display: none
-
 // /open+close menu button
+
+//// sidebar-menu
