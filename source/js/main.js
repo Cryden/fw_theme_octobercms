@@ -6,14 +6,6 @@
  */
 
 require('./bootstrap');
-//require('./../../../bower_components/gentelella/src/js/custom.js');
-//require('./../../../bower_components/gentelella/src/js/custom.js');
-//require('./../../../bower_components/gentelella/src/js/helpers/smartresize.js');
-//require('./../../../bower_components/gentelella/vendors/fastclick/lib/fastclick.js');
-//require('./../../../bower_components/gentelella/vendors/nprogress/nprogress.js');
-//require('./../../../bower_components/gentelella/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js');
-//require('./../../../bower_components/gentelella/vendors/jquery.hotkeys/jquery.hotkeys.js');
-//require('./../../../bower_components/gentelella/vendors/google-code-prettify/src/prettify.js');
 
 require ('./modules/main/fonts_loader.js');
 
@@ -72,7 +64,7 @@ function menu_display() {
             }, 500);
             $(".shadow").css("display", "none");
             $(".open_btn").show(500);
-            $(".close_btn").css("display", "none")
+            $(".close_btn").css("display", "none");
             display_menu = true;
     }});
 }

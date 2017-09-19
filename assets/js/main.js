@@ -10343,14 +10343,6 @@ module.exports = __webpack_require__(7);
  */
 
 __webpack_require__(3);
-//require('./../../../bower_components/gentelella/src/js/custom.js');
-//require('./../../../bower_components/gentelella/src/js/custom.js');
-//require('./../../../bower_components/gentelella/src/js/helpers/smartresize.js');
-//require('./../../../bower_components/gentelella/vendors/fastclick/lib/fastclick.js');
-//require('./../../../bower_components/gentelella/vendors/nprogress/nprogress.js');
-//require('./../../../bower_components/gentelella/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js');
-//require('./../../../bower_components/gentelella/vendors/jquery.hotkeys/jquery.hotkeys.js');
-//require('./../../../bower_components/gentelella/vendors/google-code-prettify/src/prettify.js');
 
 __webpack_require__(5);
 
@@ -10431,9 +10423,8 @@ $(document).ready(function () {
  */
 
 try {
-    window.$ = window.jQuery = __webpack_require__(0);
-
-    __webpack_require__(4);
+  window.$ = window.jQuery = __webpack_require__(0);
+  __webpack_require__(4);
 } catch (e) {}
 
 /***/ }),
