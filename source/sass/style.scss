@@ -4,20 +4,20 @@
 @import "bootstrap/mixins";
 @import "bootstrap/reset";
 
-// Font Awesome
-@import "~font-awesome/scss/font-awesome";
+
 
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
+// Font Awesome
+@import "~font-awesome/scss/font-awesome";
 
 // Layout styles
 
-@import "layout/base";
+@import "layout/style";
 @import "layout/fonts";
 @import "layout/header";
-//@import "layout/menu";
-@import "layout/content";
+@import "layout/main";
 @import "layout/footer";
 
 // Component styles
