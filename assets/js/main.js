@@ -60,11 +60,115 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(1);
+module.exports = __webpack_require__(6);
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/**
+ * First we will load all of this project's JavaScript dependencies which
+ * includes Vue and other libraries. It is a great starting point when
+ * building robust, powerful web applications using Vue and Laravel.
+ */
+
+__webpack_require__(2);
+
+__webpack_require__(5);
+
+//window.Vue = require('vue');
+
+/**
+ * Next, we will create a fresh Vue application instance and attach it to
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
+
+//Vue.component('example', require('./components/Example.vue'));
+
+//const app = new Vue({
+//    el: '#app',
+//    components: example
+//});
+
+
+//
+//
+// Menu component
+//
+//
+
+//Display menu function
+function menu_display() {
+    var display_menu = true;
+    console.log('menu display init');
+    $('.open_btn, .close_btn').click(function () {
+        console.log('click');
+        if (display_menu === false) {
+            $("header").animate({
+                left: "-=320"
+            }, 500);
+            $(".shadow").css("display", "none");
+            $(".open_btn").show(500);
+            $(".close_btn").css("display", "none");
+            display_menu = true;
+        } else {
+            $("header").animate({
+                left: "+=320"
+            }, 500);
+            $(".shadow").css("display", "block");
+            $(".close_btn").show(500);
+            $(".open_btn").css("display", "none");
+            display_menu = false;
+        }
+    });
+
+    $('.shadow').click(function () {
+        console.log('click');
+        if (display_menu === false) {
+            $("header").animate({
+                left: "-=320"
+            }, 500);
+            $(".shadow").css("display", "none");
+            $(".open_btn").show(500);
+            $(".close_btn").css("display", "none");
+            display_menu = true;
+        }
+    });
+}
+
+$(document).ready(function () {
+    menu_display();
+});
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/**
+ * We'll load jQuery and the Bootstrap jQuery plugin which provides support
+ * for JavaScript based Bootstrap features such as modals and tabs. This
+ * code may be modified to fit the specific needs of your application.
+ */
+
+try {
+  window.$ = window.jQuery = __webpack_require__(3);
+  __webpack_require__(4);
+} catch (e) {}
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10324,110 +10428,6 @@ return jQuery;
 
 
 /***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(2);
-module.exports = __webpack_require__(7);
-
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
-
-__webpack_require__(3);
-
-__webpack_require__(5);
-
-//window.Vue = require('vue');
-
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-//Vue.component('example', require('./components/Example.vue'));
-
-//const app = new Vue({
-//    el: '#app',
-//    components: example
-//});
-
-
-//
-//
-// Menu component
-//
-//
-
-//Display menu function
-function menu_display() {
-    var display_menu = true;
-    console.log('menu display init');
-    $('.open_btn, .close_btn').click(function () {
-        console.log('click');
-        if (display_menu === false) {
-            $("header").animate({
-                left: "-=320"
-            }, 500);
-            $(".shadow").css("display", "none");
-            $(".open_btn").show(500);
-            $(".close_btn").css("display", "none");
-            display_menu = true;
-        } else {
-            $("header").animate({
-                left: "+=320"
-            }, 500);
-            $(".shadow").css("display", "block");
-            $(".close_btn").show(500);
-            $(".open_btn").css("display", "none");
-            display_menu = false;
-        }
-    });
-
-    $('.shadow').click(function () {
-        console.log('click');
-        if (display_menu === false) {
-            $("header").animate({
-                left: "-=320"
-            }, 500);
-            $(".shadow").css("display", "none");
-            $(".open_btn").show(500);
-            $(".close_btn").css("display", "none");
-            display_menu = true;
-        }
-    });
-}
-
-$(document).ready(function () {
-    menu_display();
-});
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-/**
- * We'll load jQuery and the Bootstrap jQuery plugin which provides support
- * for JavaScript based Bootstrap features such as modals and tabs. This
- * code may be modified to fit the specific needs of your application.
- */
-
-try {
-  window.$ = window.jQuery = __webpack_require__(0);
-  __webpack_require__(4);
-} catch (e) {}
-
-/***/ }),
 /* 4 */
 /***/ (function(module, exports) {
 
@@ -14299,8 +14299,7 @@ var Popover = function ($) {
 }();
 
 /***/ }),
-/* 6 */,
-/* 7 */
+/* 6 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

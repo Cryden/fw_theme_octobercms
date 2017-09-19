@@ -1,5 +1,7 @@
 const { mix } = require('laravel-mix');
 const LiveReloadPlugin = require('webpack-livereload-plugin');
+const glob = require('glob-all');
+const PurifyCSSPlugin = require('purifycss-webpack');
 
 mix
     .setPublicPath('assets')
@@ -11,7 +13,12 @@ mix
     })
     .webpackConfig({
       plugins: [
-        new LiveReloadPlugin()
+        new LiveReloadPlugin(),
+        new PurifyCSSPlugin({
+          paths: glob.sync([
+            path.join(__dirname, '**/*.htm')
+          ]),
+        })
       ]
     })
     ;
