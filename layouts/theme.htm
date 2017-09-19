@@ -2,14 +2,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="{{ 'assets/css/style.css'|theme }}" rel="stylesheet">
-
+    {% partial 'site/meta/meta' %}
   </head>
 
   <body id="app">
@@ -19,12 +12,12 @@
         <!-- header content -->
         <header>
           <!-- menu logo -->
-          {% partial 'site/menu_logo' %}
+          {% partial 'site/main_menu/logo' %}
           <!-- /menu logo -->
           <div class="sidebar_menu">
-              {% partial 'site/menu_quickinfo' %}
+              {% partial 'site/main_menu/quickinfo' %}
               <!-- sidebar menu -->
-              {% partial 'site/main_menu' %}
+              {% partial 'site/main_menu/menu' %}
               <!-- /sidebar menu -->
               <i class="fa fa-close close_btn"></i>
           </div>

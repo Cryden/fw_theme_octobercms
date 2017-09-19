@@ -2,4 +2,5 @@ name: fun-wiki
 description: 'Theme for fun-wiki.xyz site'
 author: CRYDEsigN
 homepage: 'http://fun-wiki.xyz'
-code: ''
+code: 'fun-wiki'
+form: theme_fields.yaml
