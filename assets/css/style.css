@@ -12814,6 +12814,10 @@ main .page__title h1 {
   color: white;
 }
 
+main .page__content {
+  margin: 0 15px;
+}
+
 @media (min-width: 425px) {
   main .page__content {
     margin: 0 20px;
