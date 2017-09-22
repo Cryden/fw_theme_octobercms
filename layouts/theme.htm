@@ -1,3 +1,5 @@
+[session]
+security = "all"
 ==
 <!DOCTYPE html>
 <html lang="ru">
@@ -11,60 +13,32 @@
 
         <!-- header content -->
         <header>
-          <!-- menu logo -->
-          {% partial 'site/main_menu/logo' %}
-          <!-- /menu logo -->
-          <div class="sidebar_menu">
-              {% partial 'site/main_menu/quickinfo' %}
-              <!-- sidebar menu -->
-              {% partial 'site/main_menu/menu' %}
-              <!-- /sidebar menu -->
-              <i class="fa fa-close close_btn"></i>
-          </div>
+          {% partial 'site/header/header' %}
         </header>
         <!-- /header content -->
 
         <!-- page content -->
         <main>
-          <nav class="navbar sticky-top">
-            <a class="navbar-logo" href="{{ url('/') }}">
-              <img class="logo" src="{{ 'assets/images/logo.svg'|theme }}" alt="logo">
-            </a>
-            <div class="navbar-menu-button"><i class="fa fa-bars open_btn"></i></div>
-          </nav>
 
-          {% page %}
+          {% partial 'site/main/mobi_nav' %}
+
+          {% partial 'site/main/page' %}
 
         </main>
         <!-- /page content -->
 
         <!-- footer content -->
         <footer>
-            <div class="footer-copyright">
-                <div class="footer-copyright__copyright">
-                    <p><strong>F.UN</strong>&nbsp;&nbsp;by&nbsp;&nbsp;<strong>CRYDE</strong>sig<strong>N</strong>. 2015-2017</p>
-                </div>
-            </div>
-            <div class="footer-menu">
-                <a class="footer-menu__button active" href="#">
-                  <i class="fa icon-edit"></i>
-                </a>
-                <a class="footer-menu__button" href="#">
-                  <i class="fa icon-star"></i>
-                </a>
-                <a class="footer-menu__button" href="#">
-                  <i class="fa fa-search"></i>
-                </a>
-                <a class="footer-menu__button" href="#">
-                  <i class="fa icon-user"></i>
-                </a>
-            </div>
+            {% partial 'site/footer/footer' %}
         </footer>
         <!-- /footer content -->
     </div>
 
     <!-- Custom Theme Scripts -->
     <script src="{{ 'assets/js/main.js'|theme }}"></script>
+    {% framework extras %}
+    {% scripts %}
+    
 
   </body>
 </html>

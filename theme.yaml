@@ -4,3 +4,5 @@ author: CRYDEsigN
 homepage: 'http://fun-wiki.xyz'
 code: 'fun-wiki'
 form: theme_fields.yaml
+require:
+    - RainLab.User
