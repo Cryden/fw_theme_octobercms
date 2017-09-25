@@ -2,7 +2,7 @@ name: fun-wiki
 description: 'Theme for fun-wiki.xyz site'
 author: CRYDEsigN
 homepage: 'http://fun-wiki.xyz'
-code: 'fun-wiki'
+code: 'FunWiki'
 form: theme_fields.yaml
 require:
     - RainLab.User

@@ -8,9 +8,15 @@ is_hidden = 0
 redirect = "account"
 paramCode = "code"
 forceSecure = 0
+
+[sociallogin]
 ==
 {% component 'account' %}
 
 <hr />
 
-<p><a href="{{ 'forgot-password'|page }}">Forgotten your password?</a></p>
+<p><a href="{{ 'forgot-password'|page }}">Forgotten your password?</a></p>{% component 'sociallogin' %}
+
+{% for name, link in social_login_links %}
+<a href="{{ link }}">{{ name }}</a>
+{% endfor %}
