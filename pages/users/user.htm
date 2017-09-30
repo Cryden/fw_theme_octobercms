@@ -1,11 +1,11 @@
-title = "Пользователь"
+title = "Профиль пользователя"
 url = "/users/:username"
 layout = "theme"
 is_hidden = 0
 
 [session]
 security = "user"
-redirect = "account"
+redirect = "users/auth"
 ==
 <?php
 use Rainlab\User\Models\User as Users;

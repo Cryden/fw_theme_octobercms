@@ -4,7 +4,12 @@ layout = "theme"
 is_hidden = 0
 
 [account]
+redirect = 0
 paramCode = "code"
 forceSecure = 0
+
+[session]
+security = "user"
+redirect = "users/auth"
 ==
 {% component 'account' %}
