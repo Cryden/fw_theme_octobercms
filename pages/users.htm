@@ -1,5 +1,5 @@
-title = "Users"
-url = "/users"
+title = "Пользователи"
+url = "/users/"
 layout = "theme"
 description = "- Список пользователей"
 is_hidden = 0
@@ -8,4 +8,46 @@ is_hidden = 0
 security = "user"
 redirect = "account"
 ==
-<h1> Users </h1>
+<?php
+use Rainlab\User\Models\User as Users;
+
+function onStart()
+{
+  $this['users'] = Users::orderBy('created_at', 'desc')->get();
+
+//dd($this['users']);
+}
+
+
+?>
+==
+<div class="control-list">
+    <table class="table data">
+        <thead>
+            <tr>
+                <th class="sort-desc"><a href="/">User Name</a></th>
+                <th class="active sort-asc"><a href="/">User Email</a></th>
+                <th><span>Created at</span></th>
+                <th><span>Last activity</span></th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td><a href="/users/{{ user.username }}">{{ user.name }}</a></td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.created_at|date("m/d/Y") }}</td>
+                <td>{{ user.last_seen|date("m/d/Y") }}</td>
+                <td>
+                {% if user.isOnline %}
+                    is online
+                {% else %}
+                    {{ user.last_seen|date}}
+                {% endif%}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
