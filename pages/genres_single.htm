@@ -1,0 +1,23 @@
+title = "genres_single"
+url = "/genres/:slug"
+layout = "theme"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Crydesign\FunWiki\Models\Genres"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "title"
+notFoundMessage = "Record not found"
+==
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+
+{% if record %}
+    <h1>{{ record.title }}</h1>
+    {{ record.description|raw }}
+    <span>{{ record.icon }}</span>
+{% else %}
+    {{ notFoundMessage }}
+{% endif %}
