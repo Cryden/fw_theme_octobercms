@@ -1,0 +1,13 @@
+title = "Вселенная"
+url = "/:slug"
+layout = "theme"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Crydesign\FunWiki\Models\Universe"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "name"
+notFoundMessage = "Record not found"
+==
+{% component 'builderDetails' %}
