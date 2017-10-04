@@ -1,9 +1,9 @@
 <div class="profile">
 	<div class="profile_pic">
-		<img src="" alt="..." class="profile_img img-circle">
+		<img src="{{ user.avatar.thumb(50,50)}}" alt="..." class="profile_img img-circle">
 	</div>
 	<div class="profile_info">
-		<span>Добро пожаловать,</span>
+		<span>Добро пожаловать, {{ user.name }} </span>
 		<h2></h2>
 	</div>
 </div>

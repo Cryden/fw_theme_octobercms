@@ -12460,7 +12460,7 @@ a.text-dark:hover {
 
 body {
   background-color: #2C2F34;
-  color: black;
+  color: #080808;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 13px;
@@ -12571,7 +12571,7 @@ header::-webkit-scrollbar {
 .menu-logo__title {
   position: absolute;
   top: 90px;
-  color: black;
+  color: #080808;
   font-size: 10px;
   display: block;
   width: 100%;
@@ -12598,9 +12598,6 @@ header::-webkit-scrollbar {
   height: 50px;
   width: 50px;
   margin: 15px;
-  padding: 2px;
-  border: 1px solid rgba(52, 73, 94, 0.44);
-  background: #fff;
 }
 
 .profile .profile_info {
@@ -12701,7 +12698,7 @@ header::-webkit-scrollbar {
 }
 
 #main_menu .item:hover a {
-  color: black;
+  color: #080808;
 }
 
 #main_menu li,
@@ -12824,7 +12821,7 @@ main .page__title h1 {
   padding: 0;
   font-size: 20px;
   line-height: 60px;
-  color: black;
+  color: #080808;
 }
 
 main .page__content {
@@ -12840,6 +12837,12 @@ main .page__content {
 @media (min-width: 1024px) {
   main .page__content {
     margin: 0 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  main .page__content {
+    margin-left: 80px;
   }
 }
 
@@ -12870,7 +12873,7 @@ footer .footer-copyright {
     display: block;
     width: 50%;
     height: 50px;
-    color: black;
+    color: #080808;
     text-align: right;
     margin-right: 20px;
     line-height: 50px;

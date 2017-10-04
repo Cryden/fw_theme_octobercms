@@ -15,6 +15,11 @@ fields:
         default: Get back to basics
         span: auto
 
+    vk_url:
+        label: Vkontakte URL
+        span: auto
+        default: https://www.vk.com/
+
     facebook_url:
         label: Facebook URL
         span: auto
@@ -24,3 +29,8 @@ fields:
         label: Twitter URL
         span: auto
         default: https://www.twitter.com/
+
+    google-plus_url:
+        label: Google + URL
+        span: auto
+        default: https://www.google.com/
