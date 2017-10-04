@@ -4,7 +4,7 @@ security = "all"
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    {% partial 'site/meta/meta' %}
+    {% partial 'meta/meta' %}
   </head>
 
   <body id="app">
@@ -13,23 +13,23 @@ security = "all"
 
         <!-- header content -->
         <header>
-          {% partial 'site/header/header' %}
+          {% partial 'layout/header' %}
         </header>
         <!-- /header content -->
 
         <!-- page content -->
         <main>
 
-          {% partial 'site/main/mobi_nav' %}
+          {% partial 'layout/navigation' %}
 
-          {% partial 'site/main/page' %}
+          {% partial 'layout/page' %}
 
         </main>
         <!-- /page content -->
 
         <!-- footer content -->
         <footer>
-            {% partial 'site/footer/footer' %}
+            {% partial 'layout/footer' %}
         </footer>
         <!-- /footer content -->
     </div>

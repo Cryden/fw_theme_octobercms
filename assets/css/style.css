@@ -12460,7 +12460,7 @@ a.text-dark:hover {
 
 body {
   background-color: #2C2F34;
-  color: white;
+  color: black;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 13px;
@@ -12471,7 +12471,7 @@ strong {
 }
 
 .wrapper {
-  background-color: #434A54;
+  background-color: white;
   width: 100%;
 }
 
@@ -12509,7 +12509,7 @@ header {
   z-index: 1050;
   width: 260px;
   height: 100vh;
-  background: #434A54;
+  background: white;
   -webkit-box-shadow: 6px 0px 20px -2px rgba(0, 0, 0, 0.75);
           box-shadow: 6px 0px 20px -2px rgba(0, 0, 0, 0.75);
   display: block;
@@ -12527,6 +12527,7 @@ header {
 @media (min-width: 1440px) {
   header {
     left: 100px !important;
+    width: 320px;
   }
 }
 
@@ -12545,7 +12546,7 @@ header::-webkit-scrollbar {
   width: 260px;
   height: 120px;
   display: none;
-  background-color: #434A54;
+  background-color: white;
 }
 
 @media (min-width: 1024px) {
@@ -12553,6 +12554,12 @@ header::-webkit-scrollbar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+
+@media (min-width: 1440px) {
+  .menu-logo {
+    width: 320px;
   }
 }
 
@@ -12564,7 +12571,7 @@ header::-webkit-scrollbar {
 .menu-logo__title {
   position: absolute;
   top: 90px;
-  color: white;
+  color: black;
   font-size: 10px;
   display: block;
   width: 100%;
@@ -12654,7 +12661,7 @@ header::-webkit-scrollbar {
 }
 
 #main_menu .item_dropdown {
-  background: #434A54;
+  background: white;
 }
 
 #main_menu .item_dropdown > a.collapsed > .menu_icon_dropdown {
@@ -12694,7 +12701,7 @@ header::-webkit-scrollbar {
 }
 
 #main_menu .item:hover a {
-  color: white;
+  color: black;
 }
 
 #main_menu li,
@@ -12748,8 +12755,14 @@ main {
   }
 }
 
+@media (min-width: 1440px) {
+  main {
+    padding-left: 320px;
+  }
+}
+
 main .navbar {
-  background: #434A54;
+  background: white;
   border: 0;
   -webkit-box-shadow: 0 0px 15px black;
           box-shadow: 0 0px 15px black;
@@ -12811,7 +12824,7 @@ main .page__title h1 {
   padding: 0;
   font-size: 20px;
   line-height: 60px;
-  color: white;
+  color: black;
 }
 
 main .page__content {
@@ -12857,7 +12870,7 @@ footer .footer-copyright {
     display: block;
     width: 50%;
     height: 50px;
-    color: white;
+    color: black;
     text-align: right;
     margin-right: 20px;
     line-height: 50px;
