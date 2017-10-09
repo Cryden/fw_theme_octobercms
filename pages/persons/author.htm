@@ -1,0 +1,13 @@
+title = "Автор"
+url = "/author/:slug"
+layout = "theme"
+is_hidden = 0
+
+[builderDetails]
+modelClass = "Crydesign\FunWiki\Models\Person"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "full_name"
+notFoundMessage = "Record not found"
+==
+{% component 'builderDetails' %}
