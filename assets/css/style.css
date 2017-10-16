@@ -12838,6 +12838,7 @@ main .page__title h1 {
 
 main .page__content {
   margin: 0 15px;
+  min-height: calc(100vh - 210px);
 }
 
 @media (min-width: 425px) {

@@ -1,0 +1,29 @@
+;;
+title = "Книги"
+url = "/:universe/books/"
+layout = "theme"
+is_hidden = 0
+
+[builderList]
+modelClass = "Crydesign\FunWiki\Models\Books"
+scope = "-"
+displayColumn = "title"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+==
+<?php
+use Crydesign\FunWiki\Models\Books as Books;
+use Crydesign\FunWiki\Models\Universe as Universe;
+
+function onStart()
+{
+    $universe_id = Universe::where('title', $this->param('universe'))->first();
+    $this['books'] = Books::where('universe_id', $universe_id->id )->get();
+}
+?>
+==
+{% for book in books %}
+    {{ book.title }}
+{% endfor %}
