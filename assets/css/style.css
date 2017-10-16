@@ -12638,9 +12638,6 @@ header::-webkit-scrollbar {
 #main_menu .item {
   height: 50px;
   width: 100%;
-  line-height: 50px;
-  margin: 0;
-  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12651,9 +12648,19 @@ header::-webkit-scrollbar {
 
 #main_menu .item a {
   color: inherit;
+  text-decoration: none;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#main_menu .item a span {
   font-size: 14px;
   line-height: 50px;
-  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
 }
 
@@ -12873,7 +12880,7 @@ footer .footer-copyright {
     display: block;
     width: 50%;
     height: 50px;
-    color: #080808;
+    color: white;
     text-align: right;
     margin-right: 20px;
     line-height: 50px;
