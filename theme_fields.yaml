@@ -30,7 +30,7 @@ fields:
         span: auto
         default: https://www.twitter.com/
 
-    google-plus_url:
+    googleplus_url:
         label: Google + URL
         span: auto
         default: https://www.google.com/

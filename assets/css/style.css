@@ -12466,6 +12466,11 @@ body {
   font-size: 13px;
 }
 
+a,
+a:hover {
+  text-decoration: none;
+}
+
 strong {
   font-weight: 600;
 }
@@ -12851,6 +12856,105 @@ main .page__content {
   main .page__content {
     margin-left: 80px;
   }
+}
+
+main .page__footer {
+  margin: 0 15px;
+}
+
+@media (min-width: 425px) {
+  main .page__footer {
+    margin: 0 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  main .page__footer {
+    margin: 0 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  main .page__footer {
+    margin-left: 80px;
+  }
+}
+
+main .page__footer .social_pages {
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+main .page__footer .social_pages__text {
+  height: 30px;
+  line-height: 45px;
+  padding-right: 8px;
+  margin-right: 8px;
+  border-right: 1px solid #ff715b;
+  font-size: 14px;
+  display: none;
+}
+
+@media (min-width: 425px) {
+  main .page__footer .social_pages__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+main .page__footer .social_pages__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.social_button {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  font-size: 16px;
+  background: #93a8ac;
+  color: white;
+  vertical-align: center;
+  padding: 7px;
+}
+
+.vk:hover {
+  background: #45668E;
+  color: white;
+}
+
+.facebook:hover {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter:hover {
+  background: #4090FF;
+  color: white;
+}
+
+.googleplus:hover {
+  background: #D94A3D;
+  color: white;
 }
 
 footer {

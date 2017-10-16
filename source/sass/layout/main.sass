@@ -60,3 +60,55 @@ main
         margin: 0 40px
       +desktop
         margin-left: 80px
+    &__footer
+      margin: 0 15px
+      +tablet
+        margin: 0 20px
+      +laptop
+        margin: 0 40px
+      +desktop
+        margin-left: 80px
+      .social_pages
+        height: 30px
+        display: flex
+        flex-direction: row
+        margin-top: 30px
+        margin-bottom: 30px
+        justify-content: flex-end
+        &__text
+          height: 30px
+          line-height: 45px
+          padding-right: 8px
+          margin-right: 8px
+          border-right: 1px solid $color-second
+          font-size: 14px
+          display: none
+          +tablet 
+            display: flex
+        &__button
+          display: flex
+          flex-direction: row
+
+.social_button
+  box-sizing: border-box
+  width: 30px
+  height: 30px
+  margin-right: 8px
+  font-size: 16px
+  background: #93a8ac
+  color: white
+  vertical-align: center
+  padding: 7px
+
+.vk:hover
+  background: #45668E
+  color: white
+.facebook:hover
+  background: #3B5998
+  color: white
+.twitter:hover
+  background: #4090FF
+  color: white
+.googleplus:hover
+  background: #D94A3D
+  color: white
