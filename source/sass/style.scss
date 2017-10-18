@@ -1,24 +1,20 @@
-// Bootastrap (variables, mixins, reset)
-
-@import "bootstrap/variables";
-@import "bootstrap/mixins";
-@import "bootstrap/reset";
-
-
+// Utils (variables, mixins, reset)
+@import "utils/variables";
+@import "utils/mixins";
+@import "utils/reset";
 
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
 
-// Font Awesome
+// Fonts
 @import "~font-awesome/scss/font-awesome";
-
+@import "layout/fonts";
 
 // Layout styles
-@import "layout/fonts";
 @import "layout/style";
 @import "layout/header";
 @import "layout/main";
 @import "layout/footer";
-//@import "layout/content"
 
-// Component styles
+// Page styles
+@import "page/page_footer";
