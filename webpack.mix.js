@@ -13,7 +13,7 @@ mix
     })
     .webpackConfig({
       plugins: [
-        new LiveReloadPlugin(),
+        //new LiveReloadPlugin(),
         //new PurifyCSSPlugin({
         //  paths: glob.sync([
         //    path.join(__dirname, '**/*.htm')
