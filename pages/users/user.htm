@@ -12,9 +12,10 @@ use Rainlab\User\Models\User as Users;
 
 function onStart()
 {
-  $this['users'] = Users::where('username', $this->param('username'))->first();
+  $this['user'] = Users::where('username', $this->param('username'))->first();
 }
 ?>
 ==
-<p>{{ users.name }}</p>
-<p>{{ users.email }}</p>
+{{ user.avatar }}
+<p>{{ user.name }}</p>
+<p>{{ user.email }}</p>
