@@ -12851,6 +12851,7 @@ main {
 }
 
 .page__content {
+  width: 100%;
   margin: 0 15px;
   min-height: calc(100vh - 230px);
 }
@@ -13053,6 +13054,23 @@ footer {
     border-bottom: 0;
     border-right: 3px solid #ff715b;
   }
+}
+
+.main-sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.content__main {
+  background-color: red;
+}
+
+.content__sidebar {
+  background-color: green;
+  min-width: 300px;
+  max-width: 300px;
 }
 
 .social-pages {
