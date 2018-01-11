@@ -1,6 +1,7 @@
 [session]
 security = "all"
 ==
+{% htmlcompress %}
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -23,6 +24,7 @@ security = "all"
           {% partial 'layout/navigation' %}
 
           {% page %}
+          
 
           {% partial 'page/page_footer' %}
 
@@ -42,6 +44,6 @@ security = "all"
     {% framework extras %}
     {% scripts %}
     
-
   </body>
 </html>
+{% endhtmlcompress %}
